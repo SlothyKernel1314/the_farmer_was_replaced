@@ -3,21 +3,26 @@ clear()
 
 # GRASS MODE
 # while True:
-# 	if can_harvest():
-# 		harvest()
-# 		move(North)
+# 	for i in range(get_world_size()):
+# 		for j in range(get_world_size()):
+# 			if can_harvest():
+# 				harvest()
+# 			move(North)
+# 		move(East)
 
 # BUSH MODE
 # Init Field with Bush
-plant(Entities.Bush)
-move(North)
-plant(Entities.Bush)
-move(North)
-plant(Entities.Bush)
-move(North)
+for i in range(get_world_size()):
+		for j in range(get_world_size()):
+			plant(Entities.Bush)
+			move(North)
+		move(East)
 # Harvest Bush
 while True:
-	if can_harvest():
-		harvest()
-		plant(Entities.Bush)
-		move(North)
+	for i in range(get_world_size()):
+		for j in range(get_world_size()):
+			if can_harvest():
+				harvest()
+				plant(Entities.Bush)
+				move(North)
+			move(East)
