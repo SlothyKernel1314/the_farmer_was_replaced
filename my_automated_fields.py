@@ -46,7 +46,7 @@ def automated_field_with_bush_and_tree(WORLD_SIZE):
 def automated_field_with_pumpkin(WORLD_SIZE, WORLD_NUMBER_OF_TILES):
 	# This function encourages pumpkins to merge 
 	# and is optimized to replace pumpkins that die 
-	# + not harvest pumpkins that have not yet reached world size.
+	# + not harvest pumpkins that have not yet reached world size. """
 	while True:
 		occuped_tiles = 0
 		for i in range(WORLD_SIZE):
