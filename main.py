@@ -102,6 +102,34 @@ def automated_field_with_bush_and_tree(WORLD_SIZE):
 				move(North)
 			move(East)
 
+# PUMPKIN MODE
+def init_field_with_pumpkin(WORLD_SIZE):
+	for i in range(WORLD_SIZE):
+		for j in range(WORLD_SIZE):
+			till()
+			plant(Entities.Pumpkin)
+			watering_field()
+			move(North)
+		move(East)
+
+def automated_field_with_pumpkin(WORLD_SIZE):
+	while True:
+		for i in range(WORLD_SIZE):
+			for j in range(WORLD_SIZE):
+				if can_harvest():
+					# Retarde l'exécution afin d'augm.
+					# la proba. d'avoir un + gros pump.
+					harvest()
+					plant(Entities.Pumpkin)
+					watering_field()
+				else:
+					# Retarde l'exécution afin d'augm.
+					# la proba. d'avoir un + gros pump.
+					plant(Entities.Pumpkin)
+					watering_field()
+				move(North)
+			move(East) 
+
 # RUN
 if __name__ == "__main__":
 	# init_field_with_grass(WORLD_SIZE)
@@ -110,5 +138,7 @@ if __name__ == "__main__":
 	# automated_field_with_bush(WORLD_SIZE)
 	# init_field_with_carrot(WORLD_SIZE)
 	# automated_field_with_carrot(WORLD_SIZE)
-	init_field_with_bush_and_tree(WORLD_SIZE)
-	automated_field_with_bush_and_tree(WORLD_SIZE)
+	# init_field_with_bush_and_tree(WORLD_SIZE)
+	# automated_field_with_bush_and_tree(WORLD_SIZE)
+	init_field_with_pumpkin(WORLD_SIZE)
+	automated_field_with_pumpkin(WORLD_SIZE)
