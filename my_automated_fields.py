@@ -61,3 +61,14 @@ def automated_field_with_pumpkin(WORLD_SIZE, WORLD_NUMBER_OF_TILES):
 			if occuped_tiles == WORLD_NUMBER_OF_TILES:
 				harvest()
 				occuped_tiles = 0
+				
+def automated_field_with_sunflower(WORLD_SIZE):
+	while True:
+		for i in range(WORLD_SIZE):
+			for j in range(WORLD_SIZE):
+				if can_harvest():
+					harvest()
+					plant(Entities.Sunflower)
+					my_utilities.watering_field()
+				move(North)
+			move(East)

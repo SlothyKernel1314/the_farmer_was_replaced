@@ -40,3 +40,12 @@ def init_field_with_pumpkin(WORLD_SIZE):
 			my_utilities.watering_field()
 			move(North)
 		move(East)
+		
+def init_field_with_sunflower(WORLD_SIZE):
+	for i in range(WORLD_SIZE):
+			for j in range(WORLD_SIZE):
+				till()
+				plant(Entities.Sunflower)
+				my_utilities.watering_field()
+				move(North)
+			move(East)
