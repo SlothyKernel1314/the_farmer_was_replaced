@@ -49,3 +49,12 @@ def init_field_with_sunflower(WORLD_SIZE):
 				my_utilities.watering_field()
 				move(North)
 			move(East)
+
+def init_field_with_cactus(WORLD_SIZE):
+	for i in range(WORLD_SIZE):
+			for j in range(WORLD_SIZE):
+				till()
+				plant(Entities.Cactus)
+				my_utilities.watering_field()
+				move(North)
+			move(East)
