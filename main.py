@@ -2,11 +2,6 @@ import my_utilities
 import my_init_fields
 import my_automated_fields
 
-# TODO :
-# Fertilizer
-# Complex Sunflower Management : implement sunflower rules and constraints 
-# (but is it really cost-effective on large fields?)
-
 # AUTOMATED PARAMETERS
 WORLD_SIZE = my_utilities.clear_and_get_world_size()
 WORLD_NUMBER_OF_TILES = WORLD_SIZE * WORLD_SIZE
@@ -16,11 +11,11 @@ FIELD_MODE = {
     'GRASS_SPAMMING_MODE': False,
 	'BUSH_SPAMMING_MODE': False,
     'CARROT_SPAMMING_MODE': False,
-	'BUSH_TREE_SPAMMING_MODE': False,
+	'BUSH_TREE_SPAMMING_MODE': True,
 	'PUMPKIN_SPAMMING_MODE': False,
 	'SUNFLOWER_BASIC_SPAMMING_MODE': False,
 	'CACTUS_BASIC_SPAMMING_MODE': False,
-	'CACTUS_ADVANCED_SPAMMING_MODE': True
+	'CACTUS_ADVANCED_SPAMMING_MODE': False
 }
 
 # RUN
@@ -49,3 +44,11 @@ if __name__ == "__main__":
 	if FIELD_MODE['CACTUS_ADVANCED_SPAMMING_MODE'] == True:
 		my_init_fields.init_field_with_cactus(WORLD_SIZE)
 		my_automated_fields.automated_field_with_cactus_advanced(WORLD_SIZE)
+
+# TODO :
+# Fertilizer
+# Complex Sunflower Management : implement sunflower rules and constraints 
+# (but is it really cost-effective on large fields?)
+# Optimized movement: serpentine movement (?)
+# Optimised cactus buuble sort : variance calculation for processing the highest rows and columns.., 
+# ... memory for rows and columns already processed so that they do not need to be processed again

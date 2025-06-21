@@ -10,7 +10,7 @@ def watering_field():
 		use_item(Items.Water)
             
 def goto(target_x, target_y):
-	# This function moves the drone naively to (target_x, target_y...
+	# This function moves the drone naively to (target_x, target_y)...
 	# ... using only move(East) and move(North).                   
     # X axis (West-East)
     while get_pos_x() != target_x:
