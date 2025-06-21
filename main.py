@@ -19,7 +19,8 @@ FIELD_MODE = {
 	'BUSH_TREE_SPAMMING_MODE': False,
 	'PUMPKIN_SPAMMING_MODE': False,
 	'SUNFLOWER_BASIC_SPAMMING_MODE': False,
-	'CACTUS_BASIC_SPAMMING_MODE': True
+	'CACTUS_BASIC_SPAMMING_MODE': False,
+	'CACTUS_ADVANCED_SPAMMING_MODE': True
 }
 
 # RUN
@@ -45,4 +46,6 @@ if __name__ == "__main__":
 	if FIELD_MODE['CACTUS_BASIC_SPAMMING_MODE'] == True:
 		my_init_fields.init_field_with_cactus(WORLD_SIZE)
 		my_automated_fields.automated_field_with_cactus_basic(WORLD_SIZE)
-	
+	if FIELD_MODE['CACTUS_ADVANCED_SPAMMING_MODE'] == True:
+		my_init_fields.init_field_with_cactus(WORLD_SIZE)
+		my_automated_fields.automated_field_with_cactus_advanced(WORLD_SIZE)
